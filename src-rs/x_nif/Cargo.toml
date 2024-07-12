@@ -1,0 +1,12 @@
+[package]
+name = "x_nif"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+name = "x_nif"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.34"
