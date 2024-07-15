@@ -6,7 +6,7 @@ mod atoms {
     }
 }
 
-rustler::init! { "x_nif" }
+rustler::init! { "x_nif", [hello, add] }
 
 #[rustler::nif]
 fn hello(env: Env) -> NifResult<Term> {

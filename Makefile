@@ -1,6 +1,10 @@
 EXE := _build/default/bin/x
 LIB := priv/crates/x_nif/x_nif.so
 
+.PHONY: all
+all: rebuild
+	$(MAKE) -s check test
+
 .PHONY: build
 build: $(EXE)
 
@@ -25,6 +29,7 @@ check:
 .PHONY: test
 test:
 	rebar3 eunit
+	cargo test
 
 .PHONY: clean
 clean:
